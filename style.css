@@ -7,6 +7,7 @@
 
 
 header{
+    top: 0;
     background: -webkit-linear-gradient(180deg,#000080, #f0f);
     display: flex;
     align-items: center;
@@ -38,12 +39,14 @@ header div h3{
 }
 .nav-container a:hover{
     color: rgb(202, 6, 202);
-  }
+}
+ .nav-container li{
+    padding: 10px;
+ }
 
 .nav-container li:active{
-    border: 2px solid lightpink; 
+    outline: 2px solid lightpink; 
     border-radius: 25px;
-    padding: 10px;
 }
 
 /*primera seccion*/
@@ -99,6 +102,13 @@ header div h3{
     width: 50%;
     height: 100%;
 }
+.imagen{
+    width: 100%;
+    height: 100%;
+}
+.imagen img{
+    width: 500px;
+}
 
 
 
@@ -128,7 +138,6 @@ header div h3{
    display: grid;
    grid-template-columns: repeat(3, 1fr); 
    gap: 25px;
-   border: 1px solid black;
    margin: 30px 0;
 }
 
@@ -365,19 +374,89 @@ footer div ul li i{
 
 /*responsive*/
 @media (max-width: 880px){
-    .datos-container h1 span{
-       font-size: 40px;
-    }
-}
-
-@media (max-width: 440px){
-    header div h3{
-        display: none;
+    .nav-container ul{
+        gap: 10px;
     }
     .hello-container{
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+    .datos-container h1 span{
+       font-size: 40px;
+    }
     
+    .imagen img{
+        width: 400px;
+    }
+    .etiquetas-conocimientos{
+       grid-template-columns: repeat(2, 1fr);
+    }
+    .project-column{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .p-title p{
+        font-size: 15px;
+     }
+    
+}
+
+@media (max-width: 440px){
+    header{
+        flex-direction: column;
+        padding: 5px 10px;
+    }
+
+    .hello-container{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .datos-container a{ 
+        padding: 8px;
+        margin-top: 5px;
+        font-size: 10px;
+        width: 100px;
+        height: 30px; 
+    }
+    .imagen img{
+        width: 300px;
+    }
+    .nav-container ul{
+        gap: 5px;
+    }
+    .nav-container a{
+        font-size: 15px;
+    }
+    .datos-container h1{
+        font-size: 25px;
+     }
+     .datos-container h1 span{
+        font-size: 30px;
+     }
+
+    .etiquetas-conocimientos{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .project-column{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .p-title h2{
+        padding: 15px;
+        font-size: 25px;
+     }
+    .p-title p{
+        font-size: 12px;
+     }
+     .central-escribeme{
+        padding: 0 5px;
+    }
+    .a-contacto ul li a{
+        font-size: 10px;
+    }
+    footer nav ul{
+        font-size: 15px;
+    }
 }
