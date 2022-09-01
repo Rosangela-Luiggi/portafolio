@@ -51,10 +51,11 @@ header div h3{
 
 /*primera seccion*/
 .hello-container{
-    margin-top: 80px;
+    
+    padding-top: 90px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     min-height: 100vh;  
 }
 .datos-container {
@@ -78,6 +79,7 @@ header div h3{
  }
 
 .datos-container p{
+    text-align: center;
     font-size: 20px;
 }
 
@@ -103,11 +105,15 @@ header div h3{
     height: 100%;
 }
 .imagen{
-    width: 100%;
-    height: 100%;
+    width: 310px;
+    height: 400px;
 }
 .imagen img{
-    width: 500px;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+   
+
 }
 
 
@@ -115,11 +121,13 @@ header div h3{
 
 /*segunda Seccion*/
 .conocimientos-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+   padding: 70px 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+    
 }
 
 .p-title h2{
@@ -187,6 +195,7 @@ blockquote cite{
 
 /*tercera seccion*/
 .project-container{
+    padding: 70px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -242,86 +251,93 @@ blockquote cite{
 .borde{
     width: 900px;
     height: 600px;
-    margin: 40px;
+    padding: 25px;
     display: flex;
-    border: 2px solid black; 
-    border-radius: 15px;
-    
-   
+    gap: 35px;
+    border: 1px solid #c0c0c0; 
+    border-radius: 15px;  
 }
+
 .central-contact{
     height: 100%;
     width: 100%;
-    background-color: #f0f;
 }
-.a-contacto{
-    border: 1px solid beige;
-    margin-top: 50px;
-}
-
 .a-contacto ul li{
     margin: 30px 20px;
     list-style-type: none
 }
+.a-contacto ul li i{
+   font-size: 30px; 
+   color: #000080;
+}
+.a-contacto ul li i:hover{ 
+    color:#f0f;
+ }
 .a-contacto ul li a{
     text-decoration: none;
     color: black;
     margin: 10px;
 }
-.central-escribeme{
-    height: 100%;
-    width: 100%;
-    background-color: #f0f;
 
-}
+    
 /*formulario*/
 .central-escribeme{
-    padding: 0 20px;
-    background-color: #f28596;
-}
-form{
-    margin: 0 20px;
-}
-fieldset{
-    width: 100%;
     height: 100%;
+    width:  100%;
+    padding: 0 20px;
+}
+
+form{
+    margin: 0 10px;
+}
+
+.form-date-container{
+    display: flex;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.name{
     display: flex;
     flex-direction: column;
-    border: transparent;
+    margin: 20px 0;
 }
-.name{
+.name input{
+    padding: 5px;
+    border-radius: 20px;
     width: 100%;
-    height: 100%;
+}
+
+.surname{
     display: flex;
-    gap: 35px;  
+    flex-direction: column;
+    margin-top: 20px;  
 }
-.name label{
+.surname input{
+    padding: 5px;
+    border-radius: 20px;
     width: 100%;
 }
-.name label input{
-    width: 100%;
-    height: 40px;
-    border-radius: 15px;
-    margin-top: 10px;
-    padding-left: 10px;
+.email{
+    display: flex;
+    flex-direction: column;
 }
-.email label input{
-    padding-left: 10px;
-    margin-top: 10px;
-    height: 40px;
+
+.email input{
+    padding: 5px;
+    border-radius: 20px;
     width: 100%;
-    border-radius: 15px;
 }
+
 .from-txt{
     margin-top: 30px;
     width: 100%;
     height: 100%;
 }
-.from-txt label{
-    width: 100%;
-    height: 100%;  
-}
-.from-txt label textarea{
+  
+
+.from-txt textarea{
     width: 100%;
     height: 100%;
     margin: 10px 0;
@@ -340,8 +356,8 @@ fieldset{
 /*inicio del footer*/
 
 footer{
-    background-color: #f0f;
-    height: 250px;
+    background: -webkit-linear-gradient(180deg,#000080, #f0f);
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -356,27 +372,40 @@ footer nav ul{
 }
 
 footer nav ul a{
-    text-decoration: none; 
+    text-decoration: none;
+    color: white; 
+}
+footer nav ul a:hover{
+    color: #f28596;
 }
 
-footer div ul{
+.icon-networks ul{
     display: flex;
     margin: 15px 20px;
     list-style-type: none;
     gap: 20px;
 }
 
-footer div ul li i{
+.icon-networks ul li a i{
+    font-size: 20px;
+    color: #f28596;
     padding: 10px;
     border-radius: 50%;
-    border: 1px solid black;
+    border: 1px solid #f28596;
 }
+.icon-networks ul li a i:hover{
+    color: #000080;
+    border: 1px solid #000080;
+}
+
 
 /*responsive*/
 @media (max-width: 880px){
+    /*header*/
     .nav-container ul{
         gap: 10px;
     }
+    /*primera seccion*/
     .hello-container{
         flex-direction: column;
         justify-content: center;
@@ -388,16 +417,20 @@ footer div ul li i{
     
     .imagen img{
         width: 400px;
-    }
+    } 
+    /*Segunda seccion*/
     .etiquetas-conocimientos{
        grid-template-columns: repeat(2, 1fr);
     }
+    .p-title p{
+        font-size: 15px;
+    }
+    /*tercera seccion*/
     .project-column{
         grid-template-columns: repeat(2, 1fr);
     }
-    .p-title p{
-        font-size: 15px;
-     }
+    
+   
     
 }
 
@@ -406,7 +439,13 @@ footer div ul li i{
         flex-direction: column;
         padding: 5px 10px;
     }
-
+    .nav-container ul{
+        gap: 5px;
+    }
+    .nav-container a{
+        font-size: 15px;
+    }
+    /*primera seccion*/
     .hello-container{
         flex-direction: column;
         justify-content: center;
@@ -422,27 +461,18 @@ footer div ul li i{
     .imagen img{
         width: 300px;
     }
-    .nav-container ul{
-        gap: 5px;
-    }
-    .nav-container a{
-        font-size: 15px;
-    }
+    
     .datos-container h1{
         font-size: 25px;
      }
      .datos-container h1 span{
         font-size: 30px;
      }
+    /*Segunda seccion*/
 
     .etiquetas-conocimientos{
         grid-template-columns: repeat(1, 1fr);
     }
-
-    .project-column{
-        grid-template-columns: repeat(1, 1fr);
-    }
-    
     .p-title h2{
         padding: 15px;
         font-size: 25px;
@@ -450,12 +480,30 @@ footer div ul li i{
     .p-title p{
         font-size: 12px;
      }
+     /* segunda seccion*/
+     .project-column{
+        grid-template-columns: repeat(1, 1fr);
+    }
+     /* cuarta Seccion*/
+     .contact-container{
+        padding: 30px 20px;
+     }
+     .borde{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 400px;
+     }
      .central-escribeme{
         padding: 0 5px;
     }
-    .a-contacto ul li a{
-        font-size: 10px;
+    .form-date-container{
+        gap: 8px;
     }
+    .a-contacto ul li a{
+        font-size: 12px;
+    }
+    /*footer*/
     footer nav ul{
         font-size: 15px;
     }

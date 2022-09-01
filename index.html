@@ -43,12 +43,12 @@
         <section class="hello-container" id="hello">
             <div class="datos-container">
                 <h1>!Hola! Soy <span>Rosangela Luiggi.</span></h1>
-                <p>Desarrolladora Web Front-end.</p>
+                <p> Ing. de Sistemas y <br>Desarrolladora Web Front-end.</p>
                 <a href="#project">LO QUE HAGO</a>
             </div>
             <div class="img-container">
                 <div class="imagen">
-                    <img src="imagenes/undraw_summer_1wi4.png" title="Yo" alt="foto de perfil">
+                    <img src="imagenes/opcion1 (4).jpeg" title="Yo" alt="foto de perfil">
                 </div>
             </div>
         </section>
@@ -190,23 +190,28 @@
                         <div class="a-contacto">
                                 <ul>
                                    <li>      
-                                       <i class="devicon-facebook-plain colored"></i>
+                                       <i class="fa-brands fa-facebook"></i>
                                        <a href="https://www.facebook.com/rosangela.luiggi" target="blank">Facebook</a>
                                    </li>
 
                                    <li>
-                                      <i class="devicon-linkedin-plain colored"></i>
+                                      <i class="fa-brands fa-linkedin"></i>
                                       <a href="https://www.linkedin.com/in/rosangela-luiggi-743919117/" target="blank">Linkedin</a>
                                    </li>
 
                                    <li>    
-                                      <i class="devicon-github-original colored"></i>
+                                      <i class="fa-brands fa-github"></i>
                                       <a href="https://github.com/Rosangela-Luiggi" target="blank">Github</a>
                                    </li>
 
                                    <li>    
-                                       <i class="devicon-twitter-original colored"></i>
-                                       <a href="https://twitter.com/rosangelaluiggi" target="blank">twitter</a>
+                                      <i class="fa-brands fa-instagram"></i>
+                                      <a href="https://www.instagram.com/rosa_luiggi/" target="blank">Instagram</a>
+                                   </li>
+
+                                   <li>    
+                                       <i class="fa-regular fa-envelope"></i>
+                                       <a href="rosangelaluiggim@gmail.com" target="blank">rosangelaluiggim@gmail.com</a>
                                    </li>
                                </ul>
                         </div>
@@ -218,29 +223,27 @@
                     </div>
                
                     <form>
-                        <fieldset>
+                        <div class="form-date-container">
                             <div class="name">
-                                <label for="idnombre">Nombre *<br>
-                                    <input type="text" name="nombre" placeholder="ej.:Rosa" required="required"/>
-                                </label> 
-
-                                <label>Apellido *<br>
-                                    <input type="text" name="apellido" placeholder="ej.:Luiggi" required="required"/>
-                                </label> 
+                                <label for="name">Nombre*</label>
+                                <input id="name" type="text" name="name" placeholder="ej.:Rosa" required="required"/>
+                            </div>
+                            
+                            <div class="surname">
+                                <label for="surname">Apellido*</label>
+                                <input id="surname" type="text" name="surname" placeholder="ej.:Luiggi" required="required"/>
                            </div>
+                       </div>
 
-                           <div class="email">
-                                <label><br>Email *<br>
-                                    <input type="text" name="email" placeholder="ej.:Rosa@example.com" required="required"/>
-                                </label> 
-                           </div>
-                        </fieldset>
-                       
-
+                        <div class="email">
+                            <label for="email">Email *</label>
+                            <input id="email" type="text" name="email" placeholder="ej.:Rosa@example.com" required="required"/>   
+                        </div>
+                        
                         <div class="from-txt">
-                            <label>Mensaje *<br>
-                                <textarea name="comentario" rows="5" cols="50">Escribe aquí tu comentario: </textarea></p>
-                            </label>
+                            <label for="comment">Mensaje *</label><br>
+                            <textarea id="comment" name="comment" rows="5" cols="50">Escribe aquí tu comentario: </textarea></p>
+                        
                             <input type="submit" value="Enviar" />
                         </div>
                     </form>    
@@ -256,27 +259,27 @@
                    <li><a href="#contact">Contacto</a></li>
                 </ul>
             </nav>
-            <div>
+            <div class="icon-networks">
                 <ul>
                     <li>      
-                        <i class="devicon-facebook-plain colored"></i>
-                        <a href="https://www.facebook.com/rosangela.luiggi" target="blank"></a>
+                        <a href="https://www.facebook.com/rosangela.luiggi" target="blank"><i class="fa-brands fa-facebook"></i></a>
                     </li>
 
                     <li>
-                       <i class="devicon-linkedin-plain colored"></i>
-                       <a href="https://www.linkedin.com/in/rosangela-luiggi-743919117/" target="blank"></a>
+                       <a href="https://www.linkedin.com/in/rosangela-luiggi-743919117/" target="blank"><i class="fa-brands fa-linkedin"></i></a>
+                    </li>
+
+                    <li>   
+                       <a href="https://github.com/Rosangela-Luiggi" target="blank"><i class="fa-brands fa-github"></i></a>
                     </li>
 
                     <li>    
-                       <i class="devicon-github-original colored"></i>
-                       <a href="https://github.com/Rosangela-Luiggi" target="blank"></a>
+                        <a href="rosangelaluiggim@gmail.com" target="blank"><i class="fa-regular fa-envelope"></i></a>
+                    </li>
+                    <li>    
+                        <a href="https://www.instagram.com/rosa_luiggi/" target="blank"><i class="fa-brands fa-instagram"></i></a>
                     </li>
 
-                    <li>    
-                        <i class="devicon-twitter-original colored"></i>
-                        <a href="https://twitter.com/rosangelaluiggi" target="blank"></a>
-                    </li>
                 </ul>
             </div>
 
