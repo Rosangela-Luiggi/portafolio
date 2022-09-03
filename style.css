@@ -5,10 +5,9 @@
     font-family: 'Merienda One', cursive;
 }
 
-
 header{
     top: 0;
-    background: -webkit-linear-gradient(180deg,#000080, #f0f);
+    background: linear-gradient(90deg,#f0f 30%, #000080 );
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -23,6 +22,7 @@ header div h3{
     font-family: 'Qwigley', cursive;
     color: lightpink;
 }
+
 
 /*barra de navegacion*/
 .nav-container ul{
@@ -51,13 +51,13 @@ header div h3{
 
 /*primera seccion*/
 .hello-container{
-    
     padding-top: 90px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     min-height: 100vh;  
 }
+
 .datos-container {
     width: 50%;
     height: 100%;
@@ -76,6 +76,12 @@ header div h3{
  .datos-container h1 span{
     font-size: 50px;
     color: fuchsia;
+    text-shadow: 0  2px 0 #000080,
+               0  4px 0 #000080,
+               0  6px 0 #000080,
+               0  8px 0 #000080,
+               0 10px 0 #000080,
+               0 12px 0 #000080;
  }
 
 .datos-container p{
@@ -91,7 +97,7 @@ header div h3{
     text-decoration: none;
     font-size: 15px;
     color: black;
-    background: -webkit-linear-gradient(180deg,#000080, #f0f); 
+    background: linear-gradient(90deg,#f0f 30%, #000080 ); 
     width: 180px;
     height: 50px;
     text-align: center;
@@ -249,12 +255,13 @@ blockquote cite{
     
 }
 .borde{
+    
     width: 900px;
     height: 600px;
     padding: 25px;
     display: flex;
     gap: 35px;
-    border: 1px solid #c0c0c0; 
+    border: 1px solid #afafe4; 
     border-radius: 15px;  
 }
 
@@ -304,6 +311,8 @@ form{
     margin: 20px 0;
 }
 .name input{
+    background-color: #afafe4;
+    border: 0.5px solid #000080;
     padding: 5px;
     border-radius: 20px;
     width: 100%;
@@ -315,6 +324,8 @@ form{
     margin-top: 20px;  
 }
 .surname input{
+    background-color: #afafe4;
+    border: 0.5px solid #000080;
     padding: 5px;
     border-radius: 20px;
     width: 100%;
@@ -325,6 +336,8 @@ form{
 }
 
 .email input{
+    background-color: #afafe4;
+    border: 0.5px solid #000080;
     padding: 5px;
     border-radius: 20px;
     width: 100%;
@@ -338,6 +351,8 @@ form{
   
 
 .from-txt textarea{
+    background-color: #afafe4;
+    border: 0.5px solid #000080;
     width: 100%;
     height: 100%;
     margin: 10px 0;
@@ -345,10 +360,16 @@ form{
     padding: 10px;
 }
 .from-txt input{
+    background-color: #afafe4;
+    border: 0.5px solid #000080;
     width: 100px;
     height: 40px;
     border-radius: 20px;
     margin-bottom: 20px;
+}
+.from-txt input:hover{
+    background-color: #f882c9;
+    border: 0.5px solid #f0f;
 }
 
 
@@ -356,7 +377,7 @@ form{
 /*inicio del footer*/
 
 footer{
-    background: -webkit-linear-gradient(180deg,#000080, #f0f);
+    background: linear-gradient(180deg,#000080, #f0f);
     height: 200px;
     display: flex;
     flex-direction: column;
@@ -394,8 +415,9 @@ footer nav ul a:hover{
     border: 1px solid #f28596;
 }
 .icon-networks ul li a i:hover{
-    color: #000080;
-    border: 1px solid #000080;
+    color: #f0f;
+    border: 1px solid #f0f;
+    background-color: #000080
 }
 
 
