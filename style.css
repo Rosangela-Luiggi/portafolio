@@ -3,24 +3,41 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Merienda One', cursive;
+
+}
+:root{
+    --primario: #f0f;
+    --secundario: #000080;
+    --terciario: #6f05a3;
+    --cuarto: #f28596;
+    --quinto: #afafe4;
+    --sexto: #f5daee;
 }
 
+body{
+    box-shadow: inset 0 0 50px var(--secundario);
+    background-image: url(imagenes/fondo2.jpg); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed;
+}
 header{
     top: 0;
-    background: linear-gradient(90deg,#f0f 30%, #000080 );
+    background: linear-gradient(90deg, var(--primario) 30%, var(--secundario) );
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 60px;
     position: fixed;
-    width: 100%;
+    width: 100%;  
 }
 
 header div h3{
     text-align: center;
     font-size: 40px;
     font-family: 'Qwigley', cursive;
-    color: lightpink;
+    color: var(--terciario);
 }
 
 
@@ -31,23 +48,27 @@ header div h3{
     list-style-type: none;
 }
 
-.nav-container a{
+.nav-container ul li a{
     text-decoration: none;
     font-weight:bold;
     color: white;
     font-size: 20px;  
 }
-.nav-container a:hover{
-    color: rgb(202, 6, 202);
+.nav-container ul li a:hover{
+    color: var(--primario);
 }
- .nav-container li{
+ .nav-container ul li{
     padding: 10px;
  }
 
-.nav-container li:active{
-    outline: 2px solid lightpink; 
+.nav-container ul li:active{
+    outline: 2px solid var(--primario); 
     border-radius: 25px;
 }
+/*.nav-container ul li:last-child{
+    border: 1px solid white;
+    border-radius: 25px;
+}*/
 
 /*primera seccion*/
 .hello-container{
@@ -75,13 +96,13 @@ header div h3{
  }
  .datos-container h1 span{
     font-size: 50px;
-    color: fuchsia;
-    text-shadow: 0  2px 0 #000080,
-               0  4px 0 #000080,
-               0  6px 0 #000080,
-               0  8px 0 #000080,
-               0 10px 0 #000080,
-               0 12px 0 #000080;
+    color: var(--primario);
+    text-shadow: 0  2px 0 var(--secundario),
+               0  4px 0 var(--secundario),
+               0  6px 0 var(--secundario),
+               0  8px 0 var(--secundario),
+               0 10px 0 var(--secundario),
+               0 12px 0 var(--secundario);
  }
 
 .datos-container p{
@@ -90,14 +111,14 @@ header div h3{
 }
 
 .datos-container a{
-    border: transparent; 
+    border: 0.5px solid var(--secundario); 
     border-radius: 25px;
     padding: 15px;
     margin: 30px;
     text-decoration: none;
     font-size: 15px;
     color: black;
-    background: linear-gradient(90deg,#f0f 30%, #000080 ); 
+    background: linear-gradient(90deg, var(--primario) 30%, var(--secundario) ); 
     width: 180px;
     height: 50px;
     text-align: center;
@@ -117,13 +138,9 @@ header div h3{
 .imagen img{
     width: 100%;
     height: 100%;
-    border-radius: 20px;
-   
-
+    border-radius: 20px;  
+    box-shadow: 0 0 35px var(--secundario);
 }
-
-
-
 
 /*segunda Seccion*/
 .conocimientos-container{
@@ -132,8 +149,7 @@ header div h3{
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   min-height: 100vh;
-    
+   min-height: 100vh;   
 }
 
 .p-title h2{
@@ -156,7 +172,8 @@ header div h3{
 }
 
 .etiquetas{
-    border: 2px solid  lightpink;
+    background-color: var(--sexto);
+    border: 2px solid var(--sexto);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -167,7 +184,9 @@ header div h3{
     height:220px;
 }
 .etiquetas:hover{
-    border: 2px solid #f0f;
+    border: 2px solid transparent;
+    background: linear-gradient(130deg, var(--primario), var(--cuarto) 40%);
+    cursor: pointer;
 }
 
 .etiquetas div{
@@ -183,7 +202,7 @@ blockquote{
     justify-content: center;
     flex-direction: column;
     color: white;
-    background: linear-gradient(180deg,#f0f,#f28596);
+    background: linear-gradient(180deg, var(--primario), var(--cuarto));
     min-height: 100vh;    
 }
 blockquote i{
@@ -201,6 +220,7 @@ blockquote cite{
 
 /*tercera seccion*/
 .project-container{
+
     padding: 70px 0;
     display: flex;
     flex-direction: column;
@@ -210,7 +230,8 @@ blockquote cite{
 }
 
 .cuadro-project{
-    border: 2px solid  lightpink;
+    background-color: var(--sexto);
+    border: 2px solid var(--sexto);
     width: 150px;
     height: 150px;
 }
@@ -219,7 +240,9 @@ blockquote cite{
 }
 
 .cuadro-project:hover{
-    border: 2px solid #f0f;
+    border: 2px solid transparent;
+    background: linear-gradient(130deg, var(--primario), var(--cuarto) 40%);
+    cursor: pointer;
 }
 
 .project-column{
@@ -231,7 +254,7 @@ blockquote cite{
 }
 .cuadro-project{
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -239,11 +262,15 @@ blockquote cite{
     border-radius: 10px;
     padding: 20px;
 }
+.cuadro-project h4{
+    margin-top: 15px;
+    text-align: center;
+
+}
 
 .cuadro-project img{
     width: 100%;
     height: 100%;
-
 }
 /* cuarta seccion*/
 .contact-container{
@@ -255,13 +282,13 @@ blockquote cite{
     
 }
 .borde{
-    
+    box-shadow: inset 0 0 30px var(--secundario);
     width: 900px;
     height: 600px;
     padding: 25px;
     display: flex;
     gap: 35px;
-    border: 1px solid #afafe4; 
+    border: 1px solid var(--quinto); 
     border-radius: 15px;  
 }
 
@@ -271,14 +298,16 @@ blockquote cite{
 }
 .a-contacto ul li{
     margin: 30px 20px;
-    list-style-type: none
+    list-style-type: none;
 }
 .a-contacto ul li i{
    font-size: 30px; 
-   color: #000080;
+   color: var(--secundario);
+   margin-right: 15px;
 }
 .a-contacto ul li i:hover{ 
-    color:#f0f;
+    color: var(--primario);
+    cursor: pointer
  }
 .a-contacto ul li a{
     text-decoration: none;
@@ -312,7 +341,7 @@ form{
 }
 .name input{
     background-color: #afafe4;
-    border: 0.5px solid #000080;
+    border: 0.5px solid var(--secundario);
     padding: 5px;
     border-radius: 20px;
     width: 100%;
@@ -324,8 +353,8 @@ form{
     margin-top: 20px;  
 }
 .surname input{
-    background-color: #afafe4;
-    border: 0.5px solid #000080;
+    background-color: var(--quinto);
+    border: 0.5px solid var(--secundario);
     padding: 5px;
     border-radius: 20px;
     width: 100%;
@@ -336,8 +365,8 @@ form{
 }
 
 .email input{
-    background-color: #afafe4;
-    border: 0.5px solid #000080;
+    background-color: var(--quinto);
+    border: 0.5px solid var(--secundario);
     padding: 5px;
     border-radius: 20px;
     width: 100%;
@@ -351,8 +380,8 @@ form{
   
 
 .from-txt textarea{
-    background-color: #afafe4;
-    border: 0.5px solid #000080;
+    background-color: var(--quinto);
+    border: 0.5px solid var(--secundario);
     width: 100%;
     height: 100%;
     margin: 10px 0;
@@ -360,24 +389,24 @@ form{
     padding: 10px;
 }
 .from-txt input{
-    background-color: #afafe4;
-    border: 0.5px solid #000080;
+    background-color: var(--secundario);
+    border: 0.5px solid var(--secundario);
     width: 100px;
     height: 40px;
     border-radius: 20px;
     margin-bottom: 20px;
 }
 .from-txt input:hover{
-    background-color: #f882c9;
-    border: 0.5px solid #f0f;
+    background-color: var(--terciario);
+    border: 0.5px solid var(--primario);
+    color: white;
+    cursor: pointer;  
 }
-
-
 
 /*inicio del footer*/
 
 footer{
-    background: linear-gradient(180deg,#000080, #f0f);
+    background: linear-gradient(180deg, var(--secundario), var(--primario));
     height: 200px;
     display: flex;
     flex-direction: column;
@@ -397,7 +426,8 @@ footer nav ul a{
     color: white; 
 }
 footer nav ul a:hover{
-    color: #f28596;
+    color: var(--cuarto);
+    cursor: pointer;
 }
 
 .icon-networks ul{
@@ -409,15 +439,15 @@ footer nav ul a:hover{
 
 .icon-networks ul li a i{
     font-size: 20px;
-    color: #f28596;
+    color: var(--cuarto);
     padding: 10px;
     border-radius: 50%;
-    border: 1px solid #f28596;
+    border: 1px solid var(--cuarto);
 }
 .icon-networks ul li a i:hover{
-    color: #f0f;
-    border: 1px solid #f0f;
-    background-color: #000080
+    color: var(--primario);
+    border: 1px solid var(--primario);
+    background-color: var(--secundario);
 }
 
 
@@ -438,7 +468,7 @@ footer nav ul a:hover{
     }
     
     .imagen img{
-        width: 400px;
+        width: 350px;
     } 
     /*Segunda seccion*/
     .etiquetas-conocimientos{
@@ -461,10 +491,13 @@ footer nav ul a:hover{
         flex-direction: column;
         padding: 5px 10px;
     }
+    header div h3{
+        display: none;
+    }
     .nav-container ul{
         gap: 5px;
     }
-    .nav-container a{
+    .nav-container ul li a{
         font-size: 15px;
     }
     /*primera seccion*/
