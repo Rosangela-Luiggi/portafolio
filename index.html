@@ -141,42 +141,42 @@
                 <div class="cuadro-project">
                    <h4>Generador de Memes</h4>
                    <div>
-                       <img src="imagenes/imagen2.svg" alt="chica presentando portfolio">  
+                       <img src="imagenes/imagen2.svg" alt="imagen referente a generador de Memes">  
                    </div>
                 </div>
 
               <div class="cuadro-project">
                   <h4>Match 3</h4>
                   <div>
-                      <img src="imagenes/imagen3.svg" alt="chica presentando portfolio">  
+                      <img src="imagenes/imagen3.svg" alt="imagen referente a match 3">  
                   </div>
               </div>
 
               <div class="cuadro-project">
                   <h4>Control de Gastos</h4>
                   <div>
-                      <img src="imagenes/imagen4.svg" alt="chica presentando portfolio">  
+                      <img src="imagenes/imagen4.svg" alt="imagen referente a control de gastos">  
                   </div>
               </div>
          
               <div class="cuadro-project">
                   <h4>Administrador de Reuniones</h4>
                   <div>
-                      <img src="imagenes/imagen5.svg" alt="chica presentando portfolio">
+                      <img src="imagenes/imagen5.svg" alt="imagen referente a administrador de reuniones">
                   </div>
              </div>
               
               <div class="cuadro-project">
                   <h4>Todo App</h4>
                   <div>
-                      <img src="imagenes/imagen6.svg" alt="chica presentando portfolio">
+                      <img src="imagenes/imagen6.svg" alt="imagen referente a aplicaciones">
                   </div>
               </div>
 
               <div class="cuadro-project">
                   <h4>Buscador de Películas</h4>
                   <div>
-                      <img src="imagenes/imagen7.svg" alt="chica presentando portfolio">
+                      <img src="imagenes/imagen7.svg" alt="imagen referente a buscador de peliculas">
                   </div>
               </div>
   
@@ -230,32 +230,40 @@
                     <div class="p-title">
                         <h2>Escribeme</h2>
                     </div>
-               
+               <!--inicio del formulario-->
                     <form>
                         <div class="form-date-container">
                             <div class="name">
                                 <label for="name">Nombre*</label>
-                                <input id="name" type="text" name="name" placeholder="ej.:Rosa" required="required"/>
+                                <input id="name" type="text" name="name" placeholder="ej.:Rosa" aria-label="name" required/>
+                                 <i class="fa-regular fa-circle-xmark" ></i>
+                                <i class="fa-regular fa-circle-check" ></i>  
                             </div>
                             
                             <div class="surname">
                                 <label for="surname">Apellido*</label>
-                                <input id="surname" type="text" name="surname" placeholder="ej.:Luiggi" required="required"/>
+                                <input id="surname" type="text" name="surname" placeholder="ej.:Luiggi" aria-label="surname" required/>
+                               <!--  <i class="fa-regular fa-circle-xmark" ></i>
+                                <i class="fa-regular fa-circle-check" ></i>  -->
                            </div>
                        </div>
 
                         <div class="email">
                             <label for="email">Email *</label>
-                            <input id="email" type="text" name="email" placeholder="ej.:Rosa@example.com" required="required" />   
+                            <input id="email" type="text" name="email" placeholder="ej.:Rosa@example.com" aria-label="email" required/> 
+                            <!-- <i class="fa-regular fa-circle-xmark" ></i>
+                            <i class="fa-regular fa-circle-check" ></i> -->   
                         </div>
                         
                         <div class="from-txt">
                             <label for="comment">Mensaje *</label><br>
-                            <textarea id="comment" name="comment" rows="5" cols="50" required="required" placeholder="Escribe aquí tu comentario:"></textarea></p>
+                            <textarea id="comment" name="comment" rows="5" cols="50" required="required" placeholder="Escribe aquí tu comentario:" aria-label="comment"></textarea></p>
                         
-                            <input type="submit" value="Enviar" />
+                            <button type="submit" value="Enviar">Enviar</button>
                         </div>
-                    </form>    
+                    </form>  
+               <!--fin del formulario-->
+
             </div>
        </section>
        <!--fin de la cuarta seccion-->

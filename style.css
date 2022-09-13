@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Merienda One', cursive;
-
+    scroll-behavior: smooth;
 }
 :root{
     --primario: #f0f;
@@ -65,10 +65,10 @@ header div h3{
     outline: 2px solid var(--primario); 
     border-radius: 25px;
 }
-/*.nav-container ul li:last-child{
+.nav-container ul li:last-child{
     border: 1px solid white;
     border-radius: 25px;
-}*/
+}
 
 /*primera seccion*/
 .hello-container{
@@ -187,6 +187,7 @@ header div h3{
     border: 2px solid transparent;
     background: linear-gradient(130deg, var(--primario), var(--cuarto) 40%);
     cursor: pointer;
+    transform: scale(1.15);
 }
 
 .etiquetas div{
@@ -239,12 +240,6 @@ blockquote cite{
     height: 100%;
 }
 
-.cuadro-project:hover{
-    border: 2px solid transparent;
-    background: linear-gradient(130deg, var(--primario), var(--cuarto) 40%);
-    cursor: pointer;
-}
-
 .project-column{
     display:grid;
     grid-template-columns: repeat(3, 1fr);
@@ -271,6 +266,12 @@ blockquote cite{
 .cuadro-project img{
     width: 100%;
     height: 100%;
+}
+.cuadro-project:hover{
+    border: 2px solid transparent;
+    background: linear-gradient(130deg, var(--primario), var(--cuarto) 40%);
+    cursor: pointer;
+    transform: scale(1.1);
 }
 /* cuarta seccion*/
 .contact-container{
@@ -307,12 +308,15 @@ blockquote cite{
 }
 .a-contacto ul li i:hover{ 
     color: var(--primario);
-    cursor: pointer
+    cursor: pointer;
  }
 .a-contacto ul li a{
     text-decoration: none;
     color: black;
     margin: 10px;
+}
+.a-contacto ul li a i:hover{
+    transform:skew(190deg)
 }
 
     
@@ -340,7 +344,6 @@ form{
     margin: 20px 0;
 }
 .name input{
-    background-color: #afafe4;
     border: 0.5px solid var(--secundario);
     padding: 5px;
     border-radius: 20px;
@@ -353,7 +356,6 @@ form{
     margin-top: 20px;  
 }
 .surname input{
-    background-color: var(--quinto);
     border: 0.5px solid var(--secundario);
     padding: 5px;
     border-radius: 20px;
@@ -365,7 +367,7 @@ form{
 }
 
 .email input{
-    background-color: var(--quinto);
+    
     border: 0.5px solid var(--secundario);
     padding: 5px;
     border-radius: 20px;
@@ -380,7 +382,7 @@ form{
   
 
 .from-txt textarea{
-    background-color: var(--quinto);
+    
     border: 0.5px solid var(--secundario);
     width: 100%;
     height: 100%;
@@ -388,7 +390,7 @@ form{
     border-radius: 15px;
     padding: 10px;
 }
-.from-txt input{
+.from-txt button{
     background-color: var(--secundario);
     border: 0.5px solid var(--secundario);
     width: 100px;
@@ -396,11 +398,41 @@ form{
     border-radius: 20px;
     margin-bottom: 20px;
 }
-.from-txt input:hover{
+.from-txt button:hover{
     background-color: var(--terciario);
     border: 0.5px solid var(--primario);
     color: white;
     cursor: pointer;  
+}
+/* PseudoClases que me permiten que combie el estilo de acuerdo a lo que introduzca el usuario */
+form textarea:focus:focus, input:focus{
+    outline: 1px solid var(--secundario);
+    border: none;
+    box-shadow: 0 0 8px var(--secundario);
+}
+form textarea:valid:focus, input:valid:focus{
+    outline: 1px solid rgb(119, 234, 119);
+    border: none;
+    background-color:  rgb(205, 242, 205);
+}
+form textarea:invalid:focus, input:invalid:focus{
+    outline: 1px solid rgb(246, 92, 92);
+    border: none;
+    background-color: rgb(223, 193, 193);
+   
+} /* fin PseudoClases  */
+
+.fa-circle-xmark{
+    color: rgb(246, 92, 92);
+    font-size: 20px;
+    opacity: 0;
+}
+input:valid .fa-circle-xmark{
+    opacity: 1;
+}
+.fa-circle-check{
+    color: rgb(119, 234, 119);
+    font-size: 20px;
 }
 
 /*inicio del footer*/
@@ -448,6 +480,9 @@ footer nav ul a:hover{
     color: var(--primario);
     border: 1px solid var(--primario);
     background-color: var(--secundario);
+    cursor: pointer;
+    transition: ease-in-out 2s;
+    transform: rotateZ(190deg);
 }
 
 
@@ -457,6 +492,7 @@ footer nav ul a:hover{
     .nav-container ul{
         gap: 10px;
     }
+    
     /*primera seccion*/
     .hello-container{
         flex-direction: column;
@@ -480,17 +516,24 @@ footer nav ul a:hover{
     /*tercera seccion*/
     .project-column{
         grid-template-columns: repeat(2, 1fr);
-    }
-    
-   
+    }  
     
 }
-
-@media (max-width: 440px){
+@media (max-width: 660px){
     header{
         flex-direction: column;
         padding: 5px 10px;
     }
+    .borde{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 550px;
+     }
+    }
+
+@media (max-width: 440px){
+   
     header div h3{
         display: none;
     }
