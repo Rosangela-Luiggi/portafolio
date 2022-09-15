@@ -235,30 +235,43 @@
                         <div class="form-date-container">
                             <div class="name">
                                 <label for="name">Nombre*</label>
-                                <input id="name" type="text" name="name" placeholder="ej.:Rosa" aria-label="name" required/>
-                                 <i class="fa-regular fa-circle-xmark" ></i>
-                                <i class="fa-regular fa-circle-check" ></i>  
+                                <div class="cont-input-form">
+                                    <input id="name" type="text" name="name" pattern="[A-Za-z]{2,15}" placeholder="ej.:Rosa" aria-label="name" required/>
+                                    <i class="fa-regular fa-circle-check" ></i> 
+                                    <i class="fa-regular fa-circle-xmark" ></i>
+                                   
+                                </div> 
                             </div>
                             
                             <div class="surname">
                                 <label for="surname">Apellido*</label>
-                                <input id="surname" type="text" name="surname" placeholder="ej.:Luiggi" aria-label="surname" required/>
-                               <!--  <i class="fa-regular fa-circle-xmark" ></i>
-                                <i class="fa-regular fa-circle-check" ></i>  -->
+                                <div class="cont-input-form">
+                                    <input id="surname" type="text" name="surname" pattern="[A-Za-z]{2,15}" placeholder="ej.:Luiggi" aria-label="surname" color:  #3df32c;
+                                    font-size: 20px;
+                                    display: block;  required/>
+                                    <i class="fa-regular fa-circle-check" ></i> 
+                                    <i class="fa-regular fa-circle-xmark" ></i>
+                                    
+                               </div>   
                            </div>
                        </div>
 
                         <div class="email">
                             <label for="email">Email *</label>
-                            <input id="email" type="text" name="email" placeholder="ej.:Rosa@example.com" aria-label="email" required/> 
-                            <!-- <i class="fa-regular fa-circle-xmark" ></i>
-                            <i class="fa-regular fa-circle-check" ></i> -->   
+                            <div class="cont-input-form">
+                                <div class="cont-input-form"></div>
+                                <input id="email" type="email" name="email"  placeholder="ej.:Rosa@example.com" aria-label="email" required/> 
+                                <i class="fa-regular fa-circle-check" ></i>
+                                <i class="fa-regular fa-circle-xmark" ></i>
+                                
+                                 
+                            </div> 
                         </div>
                         
                         <div class="from-txt">
                             <label for="comment">Mensaje *</label><br>
                             <textarea id="comment" name="comment" rows="5" cols="50" required="required" placeholder="Escribe aquí tu comentario:" aria-label="comment"></textarea></p>
-                        
+                            
                             <button type="submit" value="Enviar">Enviar</button>
                         </div>
                     </form>  

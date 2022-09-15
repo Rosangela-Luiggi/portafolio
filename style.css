@@ -10,7 +10,7 @@
     --secundario: #000080;
     --terciario: #6f05a3;
     --cuarto: #f28596;
-    --quinto: #afafe4;
+    --quinto: #6e6eff;
     --sexto: #f5daee;
 }
 
@@ -76,17 +76,16 @@ header div h3{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    min-height: 100vh;  
+    min-height: 100vh; 
 }
 
 .datos-container {
     width: 50%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap:20px;
 }
 .datos-container h1{
     font-size: 40px;
@@ -108,6 +107,7 @@ header div h3{
 .datos-container p{
     text-align: center;
     font-size: 20px;
+    margin-top: 15px;
 }
 
 .datos-container a{
@@ -129,7 +129,7 @@ header div h3{
     align-items: center;
     justify-content: center;
     width: 50%;
-    height: 100%;
+    height: 100vh;
 }
 .imagen{
     width: 310px;
@@ -139,7 +139,7 @@ header div h3{
     width: 100%;
     height: 100%;
     border-radius: 20px;  
-    box-shadow: 0 0 35px var(--secundario);
+    box-shadow: 0 0 15px var(--secundario);
 }
 
 /*segunda Seccion*/
@@ -188,6 +188,7 @@ header div h3{
     background: linear-gradient(130deg, var(--primario), var(--cuarto) 40%);
     cursor: pointer;
     transform: scale(1.15);
+    z-index: -1;
 }
 
 .etiquetas div{
@@ -244,8 +245,7 @@ blockquote cite{
     display:grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    margin: 80px 100px;
-    
+    margin: 80px 100px;  
 }
 .cuadro-project{
     display: flex;
@@ -272,6 +272,7 @@ blockquote cite{
     background: linear-gradient(130deg, var(--primario), var(--cuarto) 40%);
     cursor: pointer;
     transform: scale(1.1);
+    z-index: -1;
 }
 /* cuarta seccion*/
 .contact-container{
@@ -367,7 +368,6 @@ form{
 }
 
 .email input{
-    
     border: 0.5px solid var(--secundario);
     padding: 5px;
     border-radius: 20px;
@@ -382,7 +382,6 @@ form{
   
 
 .from-txt textarea{
-    
     border: 0.5px solid var(--secundario);
     width: 100%;
     height: 100%;
@@ -403,10 +402,11 @@ form{
     border: 0.5px solid var(--primario);
     color: white;
     cursor: pointer;  
+    transition: all 1.5s linear; 
 }
 /* PseudoClases que me permiten que combie el estilo de acuerdo a lo que introduzca el usuario */
 form textarea:focus:focus, input:focus{
-    outline: 1px solid var(--secundario);
+    outline: 1px solid transparent;
     border: none;
     box-shadow: 0 0 8px var(--secundario);
 }
@@ -422,18 +422,23 @@ form textarea:invalid:focus, input:invalid:focus{
    
 } /* fin PseudoClases  */
 
-.fa-circle-xmark{
-    color: rgb(246, 92, 92);
-    font-size: 20px;
-    opacity: 0;
+.cont-input-form{
+    display: flex;
+    position: relative;   
 }
-input:valid .fa-circle-xmark{
-    opacity: 1;
+.cont-input-form i{
+    position: absolute;
+    right: 5px;
+    top: 6px;
+    display: none;
 }
-.fa-circle-check{
-    color: rgb(119, 234, 119);
-    font-size: 20px;
-}
+
+ .cont-input-form input:valid + i{
+    color:  #3df32c;
+    font-size: 18px;
+    display: block;  
+} 
+
 
 /*inicio del footer*/
 
@@ -578,7 +583,16 @@ footer nav ul a:hover{
     .p-title p{
         font-size: 12px;
      }
-     /* segunda seccion*/
+
+     blockquote p{
+       font-size: 15px;
+     }
+
+     blockquote cite{
+        font-size: 15px;
+     }
+
+     /* tercera seccion*/
      .project-column{
         grid-template-columns: repeat(1, 1fr);
     }
