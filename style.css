@@ -31,6 +31,7 @@ header{
     padding: 20px 60px;
     position: fixed;
     width: 100%;  
+    z-index: 10;
 }
 
 header div h3{
@@ -70,29 +71,32 @@ header div h3{
     border-radius: 25px;
 }
 
-/*primera seccion*/
+/*primera seccion, hola*/
 .hello-container{
     padding-top: 90px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     min-height: 100vh; 
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .datos-container {
-    width: 50%;
-    height: 100vh;
+    width: 55%;
+    height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
 .datos-container h1{
     font-size: 40px;
     display: flex;
     flex-direction: column;
     text-align: center;
  }
+
  .datos-container h1 span{
     font-size: 50px;
     color: var(--primario);
@@ -121,28 +125,31 @@ header div h3{
     background: linear-gradient(90deg, var(--primario) 30%, var(--secundario) ); 
     width: 180px;
     height: 50px;
-    text-align: center;
-    
+    text-align: center; 
 }
+
 .img-container{
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 50%;
-    height: 100vh;
+    justify-content: flex-end;
+    width: 45%;
+    height: 100%;
+    background: linear-gradient(130deg, #509fc9, #ec556f);
+    opacity: 0.7;
+    z-index: 2; 
 }
+
 .imagen{
-    width: 310px;
-    height: 400px;
+    width: 453px;
+    height: 600px;
 }
+
 .imagen img{
     width: 100%;
     height: 100%;
-    border-radius: 20px;  
-    box-shadow: 0 0 15px var(--secundario);
 }
 
-/*segunda Seccion*/
+/*segunda Seccion, conicimientos*/
 .conocimientos-container{
    padding: 70px 0;
    display: flex;
@@ -173,7 +180,7 @@ header div h3{
 
 .etiquetas{
     background-color: var(--sexto);
-    border: 2px solid var(--sexto);
+    box-shadow: 0 3px 10px #a7a7a7;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -183,6 +190,7 @@ header div h3{
     width: 220px;
     height:220px;
 }
+
 .etiquetas:hover{
     border: 2px solid transparent;
     background: linear-gradient(130deg, var(--primario), var(--cuarto) 40%);
@@ -207,9 +215,11 @@ blockquote{
     background: linear-gradient(180deg, var(--primario), var(--cuarto));
     min-height: 100vh;    
 }
+
 blockquote i{
     font-size: 100px;
 }
+
 blockquote p{
     text-align: center;
     font-size: 30px;
@@ -220,23 +230,24 @@ blockquote cite{
     font-size: 35px;
 }
 
-/*tercera seccion*/
+/*tercera seccion, proyectos*/
 .project-container{
-
     padding: 70px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .cuadro-project{
     background-color: var(--sexto);
-    border: 2px solid var(--sexto);
+    box-shadow: 0 3px 10px #a7a7a7;
     width: 150px;
     height: 150px;
 }
+
 .cuadro-project div{
     height: 100%;
 }
@@ -247,6 +258,7 @@ blockquote cite{
     gap: 30px;
     margin: 80px 100px;  
 }
+
 .cuadro-project{
     display: flex;
     flex-direction: column-reverse;
@@ -257,16 +269,17 @@ blockquote cite{
     border-radius: 10px;
     padding: 20px;
 }
+
 .cuadro-project h4{
     margin-top: 15px;
     text-align: center;
-
 }
 
 .cuadro-project img{
     width: 100%;
     height: 100%;
 }
+
 .cuadro-project:hover{
     border: 2px solid transparent;
     background: linear-gradient(130deg, var(--primario), var(--cuarto) 40%);
@@ -274,22 +287,22 @@ blockquote cite{
     transform: scale(1.1);
     z-index: -1;
 }
-/* cuarta seccion*/
+
+/* cuarta seccion, contacto*/
 .contact-container{
     min-height: 100vh;
     padding: 80px 90px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
+
 .borde{
     box-shadow: inset 0 0 30px var(--secundario);
     width: 900px;
     height: 600px;
     padding: 25px;
     display: flex;
-    gap: 35px;
     border: 1px solid var(--quinto); 
     border-radius: 15px;  
 }
@@ -298,29 +311,33 @@ blockquote cite{
     height: 100%;
     width: 100%;
 }
+
 .a-contacto ul li{
     margin: 30px 20px;
     list-style-type: none;
 }
+
 .a-contacto ul li i{
    font-size: 30px; 
    color: var(--secundario);
    margin-right: 15px;
 }
+
 .a-contacto ul li i:hover{ 
     color: var(--primario);
     cursor: pointer;
  }
+
 .a-contacto ul li a{
     text-decoration: none;
     color: black;
     margin: 10px;
 }
+
 .a-contacto ul li a i:hover{
     transform:skew(190deg)
 }
-
-    
+ 
 /*formulario*/
 .central-escribeme{
     height: 100%;
@@ -345,7 +362,8 @@ form{
     margin: 20px 0;
 }
 .name input{
-    border: 0.5px solid var(--secundario);
+    border: 0.5px solid transparent;
+    background-color: #c8c8f2;
     padding: 5px;
     border-radius: 20px;
     width: 100%;
@@ -356,19 +374,23 @@ form{
     flex-direction: column;
     margin-top: 20px;  
 }
+
 .surname input{
-    border: 0.5px solid var(--secundario);
+    border: 0.5px solid transparent;
+    background-color: #c8c8f2;
     padding: 5px;
     border-radius: 20px;
     width: 100%;
 }
+
 .email{
     display: flex;
     flex-direction: column;
 }
 
 .email input{
-    border: 0.5px solid var(--secundario);
+    border: 0.5px solid transparent;
+    background-color: #c8c8f2;
     padding: 5px;
     border-radius: 20px;
     width: 100%;
@@ -380,15 +402,16 @@ form{
     height: 100%;
 }
   
-
 .from-txt textarea{
-    border: 0.5px solid var(--secundario);
+    border: 0.5px solid transparent;
+    background-color: #c8c8f2;
     width: 100%;
     height: 100%;
     margin: 10px 0;
     border-radius: 15px;
     padding: 10px;
 }
+
 .from-txt button{
     background-color: var(--secundario);
     border: 0.5px solid var(--secundario);
@@ -396,7 +419,9 @@ form{
     height: 40px;
     border-radius: 20px;
     margin-bottom: 20px;
+    color: var(--primario);
 }
+
 .from-txt button:hover{
     background-color: var(--terciario);
     border: 0.5px solid var(--primario);
@@ -404,28 +429,33 @@ form{
     cursor: pointer;  
     transition: all 1.5s linear; 
 }
+
 /* PseudoClases que me permiten que combie el estilo de acuerdo a lo que introduzca el usuario */
 form textarea:focus:focus, input:focus{
-    outline: 1px solid transparent;
+    outline: 0.5px solid transparent;
     border: none;
     box-shadow: 0 0 8px var(--secundario);
 }
+
 form textarea:valid:focus, input:valid:focus{
-    outline: 1px solid rgb(119, 234, 119);
+    outline: 1px solid #3df32c;
     border: none;
-    background-color:  rgb(205, 242, 205);
+    background-color:  #cdf2cd;
 }
+
 form textarea:invalid:focus, input:invalid:focus{
-    outline: 1px solid rgb(246, 92, 92);
+    outline: 1px solid #f65c5c;
     border: none;
-    background-color: rgb(223, 193, 193);
-   
-} /* fin PseudoClases  */
+    background-color: #f2c3c3;
+} 
+
+/* fin PseudoClases  */
 
 .cont-input-form{
     display: flex;
     position: relative;   
 }
+
 .cont-input-form i{
     position: absolute;
     right: 5px;
@@ -433,11 +463,22 @@ form textarea:invalid:focus, input:invalid:focus{
     display: none;
 }
 
- .cont-input-form input:valid + i{
+/* Aplicacion de Selectores de hermanos adyacentes y Pseudoclases
+para validacion del formulario*/
+.cont-input-form input:valid + i{
     color:  #3df32c;
     font-size: 18px;
-    display: block;  
+    display: block; 
+    border: none; 
 } 
+
+.cont-input-form input:not(:placeholder-shown):invalid~i:nth-child(3){
+    color: #f51717;
+    font-size: 18px;
+    display: block;
+}
+
+/* fin de validacion del formulario*/
 
 
 /*inicio del footer*/
@@ -462,6 +503,7 @@ footer nav ul a{
     text-decoration: none;
     color: white; 
 }
+
 footer nav ul a:hover{
     color: var(--cuarto);
     cursor: pointer;
@@ -481,6 +523,7 @@ footer nav ul a:hover{
     border-radius: 50%;
     border: 1px solid var(--cuarto);
 }
+
 .icon-networks ul li a i:hover{
     color: var(--primario);
     border: 1px solid var(--primario);
@@ -490,54 +533,91 @@ footer nav ul a:hover{
     transform: rotateZ(190deg);
 }
 
-
 /*responsive*/
 @media (max-width: 880px){
     /*header*/
+    header{
+        flex-direction: column;
+    }
     .nav-container ul{
         gap: 10px;
     }
     
-    /*primera seccion*/
+    /*primera seccion, hola*/
     .hello-container{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 30px 0;
     }
+
     .datos-container h1 span{
        font-size: 40px;
     }
+
+    .img-container{
+        background: none;
+        opacity: 1;
+    }
     
-    .imagen img{
+    .imagen{
         width: 350px;
+        height: 450px;
     } 
-    /*Segunda seccion*/
+    .imagen img{
+        border-radius: 25px;
+        box-shadow: 0 3px 10px #a7a7a7;
+        background-color: var(--primario);
+    }
+   
+    /*Segunda seccio, conomiento*/
     .etiquetas-conocimientos{
        grid-template-columns: repeat(2, 1fr);
     }
+    .p-title h2{
+        padding: 15px;
+        font-size: 30px;
+     } 
     .p-title p{
         font-size: 15px;
     }
-    /*tercera seccion*/
+    
+    blockquote i{
+        font-size: 80px;
+     }
+
+     blockquote p{
+       font-size: 25px;
+     }
+
+     blockquote cite{
+        font-size: 20px;
+     }
+
+    /*tercera seccion, proyecto*/
     .project-column{
         grid-template-columns: repeat(2, 1fr);
+    }
+    /* seccion contacto */
+    .borde{
+        width: 600px;
+        padding: 15px;
+        
+    }
+    /* footer */
+    .icon-networks ul{
+
+        margin: 10px 15px;
+        gap: 10px;
     }  
     
 }
-@media (max-width: 660px){
-    header{
-        flex-direction: column;
-        padding: 5px 10px;
-    }
-    .borde{
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        width: 550px;
-     }
-    }
 
-@media (max-width: 440px){
+
+@media screen and (max-width: 440px) {
+    header{
+        justify-content: center;
+    }
    
     header div h3{
         display: none;
@@ -548,7 +628,7 @@ footer nav ul a:hover{
     .nav-container ul li a{
         font-size: 15px;
     }
-    /*primera seccion*/
+    /*primera seccion, hola*/
     .hello-container{
         flex-direction: column;
         justify-content: center;
@@ -561,9 +641,14 @@ footer nav ul a:hover{
         width: 100px;
         height: 30px; 
     }
-    .imagen img{
-        width: 300px;
-    }
+    .img-container{
+        justify-content: center;
+
+     }
+     .imagen{
+        width: 310px;
+        height: 320px;
+     }
     
     .datos-container h1{
         font-size: 25px;
@@ -571,7 +656,7 @@ footer nav ul a:hover{
      .datos-container h1 span{
         font-size: 30px;
      }
-    /*Segunda seccion*/
+    /*Segunda seccion, conocimientos*/
 
     .etiquetas-conocimientos{
         grid-template-columns: repeat(1, 1fr);
@@ -583,6 +668,9 @@ footer nav ul a:hover{
     .p-title p{
         font-size: 12px;
      }
+     blockquote i{
+        font-size: 50px;
+     }
 
      blockquote p{
        font-size: 15px;
@@ -592,16 +680,15 @@ footer nav ul a:hover{
         font-size: 15px;
      }
 
-     /* tercera seccion*/
+     /* tercera seccion, proyectos*/
      .project-column{
         grid-template-columns: repeat(1, 1fr);
     }
-     /* cuarta Seccion*/
+     /* cuarta Seccion, contacto*/
      .contact-container{
         padding: 30px 20px;
      }
      .borde{
-        display: flex;
         flex-direction: column;
         height: 100%;
         width: 400px;
@@ -619,4 +706,32 @@ footer nav ul a:hover{
     footer nav ul{
         font-size: 15px;
     }
+}
+@media screen and (max-width: 300px){
+    header div h3{
+        display: none;
+    }
+    .nav-container ul li:last-child{
+        border: 0.5px solid transparent;
+    }
+    .nav-container ul{
+        gap: 3px;
+    }
+    .nav-container ul li a{
+        font-size: 10px;
+    }
+   
+    .imagen{
+        width: 250px;
+        height: 330px;
+    }
+
+    footer{
+    height: 100px;
+    }
+    footer nav ul, .icon-networks ul{
+      display: none;
+    } 
+  
+
 }
