@@ -1,5 +1,5 @@
-# Portfolio | Rosangela Luiggi &#127801
-## Intro &#128373
+# Portfolio | Rosangela Luiggi 
+## Intro 
     A continuación encontrarás los detalles del proyecto, el cual consiste en un portafolio profesional basado en el lenguaje de etiquetado `HTML` y lenguaje de estilos `CSS`. Consta de varias secciones en donde soy a conocer los conocimientos que he adquirido y los proyectos que he podido realizar gracias a ellos, también encontraras mis datos de contacto para que podamos comunicarnos si así lo deseas. 
 
 ### Lenguajes Utilizados.
